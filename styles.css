@@ -27,6 +27,11 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
+#logo { 
+  float: left;
+  display: inline-block;
+}
+
 /* Logo Styles */
 .logo {
     color: white;
