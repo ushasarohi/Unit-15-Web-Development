@@ -233,7 +233,7 @@ section {
     margin-bottom: 20px;
 }
 
-.introuction {
+.introduction {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -243,16 +243,16 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#introuction h2 {
+#introduction h2 {
     color: #007BFF;
 }
 
-.introuction p {
+.introduction p {
     color: black;
 }
 
 @media (max-width: 768px) {
-    .introuction {
+    .introduction {
         align-items: center;
         display: block;
     }
