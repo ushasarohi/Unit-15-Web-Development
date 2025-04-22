@@ -233,7 +233,7 @@ section {
     margin-bottom: 20px;
 }
 
-#introduction {
+.introduction {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -243,11 +243,7 @@ section {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#introduction h2 {
-    color: #007BFF;
-}
-
-#introduction p {
+.introduction p {
     color: black;
 }
 
