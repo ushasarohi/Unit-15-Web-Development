@@ -1,0 +1,381 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    z-index: 10000;
+    position: fixed;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #007BFF;
+    padding: 15px 20px;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Logo Styles */
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 8px;
+}
+
+/* Navigation Links Styles */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-top: 1.5%;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 20px 4px 0;
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    color: black;
+}
+
+.dropbtn {
+    background-color: white;
+    color: #007BFF;
+    padding: 16px;
+    font-size: 16px;
+    width: 200px;
+    border: none;
+    cursor: pointer;
+    margin-top: 0%;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: white;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Hide Nav Links Initially */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        text-align: center;
+        overflow-y: auto;
+        max-height: 70vh;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Show Nav Links When Toggled */
+    .nav-links.show {
+        display: flex;
+    }
+
+    /* Navbar Toggler Button */
+    .navbar-toggler {
+        background: white;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: -10%;
+        right: 20px;
+        height: 45px;
+        width: 45px;
+      margin-top: 20px;
+      border-radius: 8px;
+        line-height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar-toggler.active {
+        background: #007BFF;
+        color: white;
+    }
+
+    .navbar-toggler .hamburger {
+        display: block;
+    }
+    
+    .navbar-toggler .close {
+        display: none;
+    }
+    
+    .navbar-toggler.active .hamburger {
+        display: none;
+    }
+    
+    .navbar-toggler.active .close {
+        display: block;
+    }
+
+    /* Change link color to black on mobile */
+    .nav-links a {
+        color: black; /* Change link color to black on mobile */
+    }
+
+    .nav-links a:hover {
+        color: #007BFF; /* Set hover color to blue for better contrast */
+    }
+
+    /* Dropdown Content Fix for Mobile */
+    .dropdown-content {
+        position: relative;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+    }
+
+    /* Make dropdown visible when clicked */
+    .dropdown.active .dropdown-content {
+        display: block;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 20px 20px 20px 0;
+    color: #333;
+  }
+
+  h1 {
+    color: #2d1e4c;
+    font-size: 2.5rem;
+  }
+
+  .checkmark {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-top: 90px;
+  }
+
+  .box {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+  }
+
+  .box h2 {
+    margin-bottom: 15px;
+    color: #007BFF;
+  }
+
+  .box ol {
+    text-align: left;
+    margin: 0 auto;
+    max-width: 500px;
+    padding-left: 20px;
+  }
+
+  .email {
+    font-weight: bold;
+  }
+
+  .buttons {
+    margin-top: 30px;
+  }
+
+  .buttons a {
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+
+  .learn {
+    background: #007BFF;
+  }
+
+  .learn:hover {
+    background: #2d1e4c;
+  }
+
+  .home {
+    background: #007BFF;
+  }
+
+  .home:hover {
+    background: #2d1e4c;
+  }
+
+  @media (max-width: 768px) {
+    .buttons {
+        padding-bottom: 30px;
+      }
+    .box {
+       margin-left: 18px;
+    }
+     h1 {
+       margin-left: 18px;
+    }
+    p {
+      margin-left: 18px;
+    }
+
+  }
+
+  /* Footer Styles */
+.footer {
+    position: relative;
+    width: 100%;
+    background: #007BFF;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+.social-icon,
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+    list-style: none;
+}
+
+.social-icon__link,
+.menu__link {
+    font-size: 2rem;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+}
+
+.social-icon__link:hover,
+.menu__link:hover {
+    transform: translateY(-10px);
+}
+
+.menu__link {
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    opacity: 0.75;
+    font-weight: 300;
+}
+
+.menu__link:hover {
+    opacity: 1;
+}
+
+.footer p {
+    color: white;
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* Wave Animation */
+.wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("https://i.ibb.co/wQZVxxk/wave.png");
+    background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+}
+
+.wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+}
+
